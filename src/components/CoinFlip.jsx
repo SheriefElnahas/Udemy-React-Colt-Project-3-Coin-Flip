@@ -2,16 +2,36 @@ import './CoinFlip.css';
 import React from 'react';
 import Coin from './Coin';
 
+const coinHead = 'https://tinyurl.com/react-coin-heads-jpg';
+const coinTail = 'https://tricksupply.com/wp-content/uploads/2019/10/s-l1600.jpg';
+
 class CoinFlip extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {imgSrc : 'https://upload.wikimedia.org/wikipedia/commons/c/cd/S_Half_Dollar_Obverse_2016.jpg'};
+        this.state = {imgSrc : ''};
+        this.flipImage = this.flipImage.bind(this);
     }
+
+    flipImage() {
+        this.setState({imgSrc : coinHead});
+        
+        if(this.state.imgSrc === coinHead) {
+
+            this.setState({imgSrc : coinTail})
+        } else {
+
+            this.setState({imgSrc: coinHead});
+        }
+    }
+
+
+
     render() {
+
         return (
             <div className="CoinFlip">
-                    <Coin imgSource={this.state.imgSrc} />
-                    <button> Flip Mee</button>
+                    <Coin  imgSource={this.state.imgSrc} />
+                    <button onClick={this.flipImage}> Flip Mee</button>
             </div>
         )
     }
