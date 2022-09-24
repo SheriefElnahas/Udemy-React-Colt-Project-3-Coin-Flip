@@ -1,0 +1,18 @@
+.CoinFlip {
+    width:500px;
+    margin:2rem auto;
+    text-align: center;
+}
+
+.CoinFlip button {
+    margin:1rem;
+    padding:0.7rem 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    background:teal;
+    color:#fff;
+    cursor: pointer;
+}

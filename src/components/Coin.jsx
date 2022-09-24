@@ -2,10 +2,10 @@ import React from 'react';
 
 
 class Coin extends React.Component {
-    render() {
+    render(props) {
         return (
             <div>
-                <img style={{width: '200px'}} src='https://upload.wikimedia.org/wikipedia/commons/c/cd/S_Half_Dollar_Obverse_2016.jpg' alt="" />
+                <img style={{width: '200px'}} src={this.props.imgSource} alt="" />
             </div>
         )
     }
